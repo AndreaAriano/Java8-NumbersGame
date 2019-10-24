@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="582.0" prefWidth="399.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.bira0003.numbersgame.controllers.ScoresController">
+   <children>
+      <Pane prefHeight="589.0" prefWidth="399.0" style="-fx-background-color: #404040;">
+         <children>
+            <Label alignment="CENTER" layoutX="14.0" layoutY="46.0" prefHeight="76.0" prefWidth="369.0" text="High Scores" textAlignment="CENTER" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="60.0" />
+               </font>
+            </Label>
+            <Button fx:id="backButton" layoutX="144.0" layoutY="465.0" mnemonicParsing="false" onMouseClicked="#navigateToGame" prefHeight="26.0" prefWidth="94.0" text="Back">
+               <font>
+                  <Font size="12.0" />
+               </font>
+            </Button>
+            <TableView fx:id="scoresTable" layoutX="34.0" layoutY="156.0" prefHeight="278.0" prefWidth="314.0">
+               <columns>
+                  <TableColumn fx:id="dateColumn" maxWidth="150.0" prefWidth="74.0" text="Date" />
+                  <TableColumn fx:id="playerNameColumn" maxWidth="218.0" prefWidth="106.0" text="Player Initials" />
+                  <TableColumn fx:id="pairsColumn" maxWidth="177.0" prefWidth="59.0" text="Pairs" />
+                  <TableColumn fx:id="scoreColumn" maxWidth="179.0" minWidth="73.0" prefWidth="73.0" text="Score" />
+               </columns>
+               <sortOrder>
+                  <fx:reference sortType="ASCENDING" source="scoreColumn" />
+               </sortOrder>
+            </TableView>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
